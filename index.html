@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FENTY BEAUTY STORE</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button id="dark-mode-btn">Dark Mode</button>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="FENTY BEAUTY STORE">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><input type="text" id="search-bar" placeholder="Search..."></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">FENTY BEAUTY</h1>
+            <p class="hero-description">Feel At Home</p>
+            <a href="#contact" class="btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service" onclick="showServiceDetails('service1')">
+                    <img src="../images/wigs.jfif" alt="Service 1">
+                    <h3>WIG PLACEMENTS</h3>
+                    <p>Click to learn more</p>
+                </div>
+                <div class="service" onclick="showServiceDetails('service2')">
+                    <img src="../images/makeup.jfif" alt="Service 2">
+                    <h3>MAKE UP</h3>
+                    <p>Click to learn more</p>
+                </div>
+                <div class="service" onclick="showServiceDetails('service3')">
+                    <img src="../images/manicure.jfif" alt="Service 3">
+                    <h3>MANICURE AND PEDICURE</h3>
+                    <p>Click to learn more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Service Details -->
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="service-details"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>WE OFFER THE BEST COSMETOLOGY SERVICES IN THE COUNTRY</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item">
+                    <img src="../images/model3.jfif" alt="Jane">
+                    <p>"Awesome customer care" - Jane Doe</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="../images/model2.jfif" alt="Joan">
+                    <p>"everyone is really lovely and hospitable." - Joan Smith</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="../images/model1.jfif" alt="Emily">
+                    <p>"Professional and reliable sercives for sure!" - Emily Johnson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map">
+        <div class="container">
+            <h2>our location</h2>
+            <div id="map-container"></div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Account Creation Section -->
+    <!--<section id="signup" class="signup">
+        <div class="container">
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </section>-->
+
+    <!-- Login Section -->
+    <!--<section id="login" class="login">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </section>-->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="mailto:your-info@fentybeauty.com" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fenty Beauty. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
